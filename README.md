@@ -5,9 +5,7 @@
 
 **FSL-Net** (Feature Shift Localization Network) detects **feature-level shifts** between a **clean reference** dataset and a **potentially corrupted query** dataset. It compares **statistical descriptors** and **learned functionals** to estimate the **shift probability** for each feature.
 
-FSL-Net is **fast**, **scalable**, and **fully pre-trained** — no fine-tuning required. It is applicable to any reference and query under the assumption that they 
-
-invariant to sample order and approximately equivariant to feature order. It matches or outperforms [DataFix](https://github.com/AI-sandbox/DataFix) in feature shift localization accuracy while offering significantly better time efficiency on large and high-dimensional datasets.
+FSL-Net is **fast**, **scalable**, and **fully pre-trained** — no fine-tuning required. It is applicable to datasets with varying numbers of samples and features, and it generalizes to unseen datasets and shift types during training. It matches or outperforms [DataFix](https://github.com/AI-sandbox/DataFix) in feature shift localization accuracy while offering significantly better time efficiency on large and high-dimensional datasets.
 
 <p align="center">
   <img src="./images/architecture.png" alt="FSL-Net Architecture" width="700"/>
@@ -49,7 +47,7 @@ pip3 install git+https://github.com/AI-sandbox/FSL-Net.git
 
 ## Usage
 
-Load the pre-trained FSL-Net model and run inference in just a few lines:
+Load the pre-trained **FSL-Net** model and run inference in just a few lines:
 
 ```python
 from fslnet.fslnet import FSLNet
@@ -74,6 +72,6 @@ For a practical example, see [demos/demo.ipynb](./demos/demo.ipynb).
 
 ## Citation
 
-If you use FSL-Net in your research, please cite our paper:
+If you use **FSL-Net** in your research, please cite our paper:
 
 > Barrabés, M., Montserrat, D. M., Dev, K., & Ioannidis, A. G. (2025, July). Feature Shift Localization Network. In Forty-second International Conference on Machine Learning (ICML 2025).
