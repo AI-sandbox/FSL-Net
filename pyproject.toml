@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fslnet"
+dynamic = ["version"]
+description = "Local ancestry inference pipeline using Gnomix and related tools"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "BSD 3-Clause License"}
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
+dependencies = [
+    "numpy<2; python_version < '3.10'",
+    "numpy; python_version >= '3.10'",
+    "pandas",
+    "requests",
+    "scikit-learn",
+    "torch",
+    "ipython",
+    "decorator",
+    "pexpect; sys_platform != 'win32' and sys_platform != 'emscripten'",
+    "exceptiongroup; python_version < '3.11'"
+]
+
+[tool.setuptools.package-data]
+"fslnet.checkpoints" = ["*.pth"]
+
+[project.urls]
+"Source Code" = "https://github.com/AI-sandbox/FSL-Net"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["fslnet*"]
