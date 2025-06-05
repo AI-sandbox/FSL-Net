@@ -1,5 +1,8 @@
 # FSL-Net
 
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![Python Version](https://img.shields.io/pypi/pyversions/snputils.svg?color=green)](https://python.org)
+
 **FSL-Net** (Feature Shift Localization Network) detects **feature-level shifts** between a **clean reference** dataset and a **potentially corrupted query** dataset. It compares **statistical descriptors** and **learned functionals** to estimate the **shift probability** for each feature.
 
 FSL-Net is **fast**, **scalable**, and **fully pre-trained** — no fine-tuning required. It is applicable to any reference and query under the assumption that they 
